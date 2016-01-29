@@ -1,7 +1,7 @@
 <?php
 class LanguageConverter{
     function geoLatToUtf8($str, $mbInternalEncoding='UTF-8'){
-        if($setMbInternalEncoding==true) mb_internal_encoding("UTF-8");
+        mb_internal_encoding($mbInternalEncoding);
         
         $latin_to_utf8=array(
             'a'=>'ა',
