@@ -2,6 +2,8 @@
 Converter for internationalization support
 Possible many language convertation support
 
+
+### Sample code:
 ```sh
 <?php
 require_once 'classes/LanguageConverter.php';
@@ -17,7 +19,7 @@ echo $languageConverter->convertString($str, 'geolat2utf8MixTest', 'utf-8')."\n"
 ?>
 ```
 
-Result:
+### Result:
 ```sh
 გამარჯობა სამყარო!
 GAმAრჯოBA სAმყAრო!
