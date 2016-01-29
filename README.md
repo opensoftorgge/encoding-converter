@@ -1,3 +1,3 @@
 # converter-i18n
-Convertor for internationalization support
+Converter for internationalization support
 Possible many language convertation support
