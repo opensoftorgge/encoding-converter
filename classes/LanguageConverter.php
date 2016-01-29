@@ -4,7 +4,7 @@
 # http://opensoft.org.ge
 
 class LanguageConverter{
-    function stringConverter($str, $mapName, $mbInternalEncoding='UTF-8'){
+    function convertString($str, $mapName, $mbInternalEncoding='UTF-8'){
         mb_internal_encoding($mbInternalEncoding);
         
         $charMap=array();
