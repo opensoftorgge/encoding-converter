@@ -5,47 +5,30 @@
 # Git Projects: https://github.com/opensoftge
 
 class LanguageConverter{
+
+	private $charMap=array(
+		'geolat2utf8'=>array(
+            'a'=>'ა','b'=>'ბ','g'=>'გ','d'=>'დ','e'=>'ე','v'=>'ვ','z'=>'ზ','T'=>'თ','i'=>'ი','k'=>'კ','l'=>'ლ','m'=>'მ','n'=>'ნ','o'=>'ო','p'=>'პ','J'=>'ჟ','r'=>'რ','s'=>'ს','t'=>'ტ','u'=>'უ','f'=>'ფ','q'=>'ქ','R'=>'ღ','y'=>'ყ','S'=>'შ','C'=>'ჩ','c'=>'ც','Z'=>'ძ','w'=>'წ','W'=>'ჭ','x'=>'ხ','j'=>'ჯ','h'=>'ჰ'
+        )
+	);
+	
+	public function setCharMap($charMap=array()){
+		$this->charMap=$charMap;
+	}
+	
+	public function getCharMap(){
+		return $this->charMap;
+	}
+	
+	public function addCharMap($charMapKey, $charMapValue=array()){
+		$this->charMap[$charMapKey]=$charMapValue;
+	}
+	
     function convertString($str, $mapName, $mbInternalEncoding='UTF-8'){
         mb_internal_encoding($mbInternalEncoding);
         
-        $charMap=array();
-        
-        $charMap['geolat2utf8']=array(
-            'a'=>'ა',
-            'b'=>'ბ',
-            'g'=>'გ',
-            'd'=>'დ',
-            'e'=>'ე',
-            'v'=>'ვ',
-            'z'=>'ზ',
-            'T'=>'თ',
-            'i'=>'ი',
-            'k'=>'კ',
-            'l'=>'ლ',
-            'm'=>'მ',
-            'n'=>'ნ',
-            'o'=>'ო',
-            'p'=>'პ',
-            'J'=>'ჟ',
-            'r'=>'რ',
-            's'=>'ს',
-            't'=>'ტ',
-            'u'=>'უ',
-            'f'=>'ფ',
-            'q'=>'ქ',
-            'R'=>'ღ',
-            'y'=>'ყ',
-            'S'=>'შ',
-            'C'=>'ჩ',
-            'c'=>'ც',
-            'Z'=>'ძ',
-            'w'=>'წ',
-            'W'=>'ჭ',
-            'x'=>'ხ',
-            'j'=>'ჯ',
-            'h'=>'ჰ'
-        );
-        
+        $charMap=$this->getCharMap();
+
         $convertedString="";
         $tmpChar=null;
         $strLength=mb_strlen($str);
