@@ -1,4 +1,8 @@
 <?php
+
+// Created By OpenSoft
+// http://opensoft.org.ge
+
 class LanguageConverter{
     function geoLatToUtf8($str, $mbInternalEncoding='UTF-8'){
         mb_internal_encoding($mbInternalEncoding);
