@@ -4,10 +4,12 @@
 # http://opensoft.org.ge
 
 class LanguageConverter{
-    function geoLatToUtf8($str, $mbInternalEncoding='UTF-8'){
+    function stringConverter($str, $mapName, $mbInternalEncoding='UTF-8'){
         mb_internal_encoding($mbInternalEncoding);
         
-        $latin_to_utf8=array(
+        $charMap=array();
+        
+        $charMap['geolat2utf8']=array(
             'a'=>'ა',
             'b'=>'ბ',
             'g'=>'გ',
@@ -43,7 +45,7 @@ class LanguageConverter{
             'h'=>'ჰ'
         );
         
-        $strUtf8="";
+        $convertedString="";
         $tmpChar=null;
         $strLength=mb_strlen($str);
         $strNew=array();
@@ -56,13 +58,13 @@ class LanguageConverter{
         }
         for($i=0; $i<count($strNew); $i++){
             $tmpChar=$strNew[$i];	
-            if(isset($latin_to_utf8[$tmpChar])){
-                $strUtf8.=$latin_to_utf8[$tmpChar]; 
+            if(isset($charMap[$mapName][$tmpChar])){
+                $convertedString.=$charMap[$mapName][$tmpChar]; 
             }else {
-                $strUtf8.=$tmpChar;
+                $convertedString.=$tmpChar;
             }
         }
-        return $strUtf8;
+        return $convertedString;
         }
 }  
 ?>
