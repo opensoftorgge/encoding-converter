@@ -1,7 +1,8 @@
 <?php
 # Created By OpenSoft <info@opensoft.org.ge>
 # Licensed under MIT License
-# http://opensoft.org.ge
+# Software Projects Web Site: http://opensoft.org.ge
+# Git Projects: https://github.com/opensoftge
 
 class LanguageConverter{
     function convertString($str, $mapName, $mbInternalEncoding='UTF-8'){
