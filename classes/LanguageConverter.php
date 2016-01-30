@@ -4,7 +4,7 @@
 # Projects Web Site: http://opensoft.org.ge
 # Software Projects Web Site: http://opensoft.ge
 # Git Projects: https://github.com/opensoftge
-# version 1.2
+# version 1.3
 
 class LanguageConverter{
 
@@ -14,7 +14,8 @@ class LanguageConverter{
 		'geolat2utf8'=>array(
             'a'=>'ა','b'=>'ბ','g'=>'გ','d'=>'დ','e'=>'ე','v'=>'ვ','z'=>'ზ','T'=>'თ','i'=>'ი','k'=>'კ','l'=>'ლ','m'=>'მ','n'=>'ნ','o'=>'ო','p'=>'პ','J'=>'ჟ','r'=>'რ','s'=>'ს','t'=>'ტ','u'=>'უ','f'=>'ფ','q'=>'ქ','R'=>'ღ','y'=>'ყ','S'=>'შ','C'=>'ჩ','c'=>'ც','Z'=>'ძ','w'=>'წ','W'=>'ჭ','x'=>'ხ','j'=>'ჯ','h'=>'ჰ'
         ),
-        'geostlat2utf8'=>array('À'=>'ა','Á'=>'ბ','Â'=>'გ','Ã'=>'დ','Ä'=>'ე','Å'=>'ვ','Æ'=>'ზ','È'=>'თ','É'=>'ი','Ê'=>'კ','Ë'=>'ლ','Ì'=>'მ','Í'=>'ნ','Ï'=>'ო','Ð'=>'პ','Ñ'=>'ჟ','Ò'=>'რ','Ó'=>'ს','Ô'=>'ტ','Ö'=>'უ','×'=>'ფ','Ø'=>'ქ','Ù'=>'ღ','Ú'=>'ყ','Û'=>'შ','Ü'=>'ჩ','Ý'=>'ც','Þ'=>'ძ','ß'=>'წ','à'=>'ჭ','á'=>'ხ','ã'=>'ჯ','ä'=>'ჰ'
+        'geostlat2utf8'=>array(
+			'À'=>'ა','Á'=>'ბ','Â'=>'გ','Ã'=>'დ','Ä'=>'ე','Å'=>'ვ','Æ'=>'ზ','È'=>'თ','É'=>'ი','Ê'=>'კ','Ë'=>'ლ','Ì'=>'მ','Í'=>'ნ','Ï'=>'ო','Ð'=>'პ','Ñ'=>'ჟ','Ò'=>'რ','Ó'=>'ს','Ô'=>'ტ','Ö'=>'უ','×'=>'ფ','Ø'=>'ქ','Ù'=>'ღ','Ú'=>'ყ','Û'=>'შ','Ü'=>'ჩ','Ý'=>'ც','Þ'=>'ძ','ß'=>'წ','à'=>'ჭ','á'=>'ხ','ã'=>'ჯ','ä'=>'ჰ'			
         )
 	);
 		
@@ -103,7 +104,8 @@ class LanguageConverter{
             $strLength=mb_strlen($str);
         }
         for($i=0; $i<count($strNew); $i++){
-            $tmpChar=$strNew[$i];	
+            if($mapName=='geolat2utf8') $tmpChar=strtolower($strNew[$i]);	
+            else $tmpChar=$strNew[$i];	
             if(isset($charMap[$mapName][$tmpChar])){
                 $convertedString.=$charMap[$mapName][$tmpChar]; 
             }else {
@@ -130,7 +132,9 @@ class LanguageConverter{
             $strLength=mb_strlen($str);
         }
         for($i=0; $i<count($strNew); $i++){
-            $tmpChar=$strNew[$i];	
+			if($charMapKeyIndex=='georgia' && $charMapLayoutFrom=='ascii') $tmpChar=strtolower($strNew[$i]);
+            else $tmpChar=$strNew[$i];	
+            
             $index=array_search($tmpChar, $charMapFrom);	
             if($index!==false && isset($charMapTo[$index])){
                 $convertedString.=$charMapTo[$index];
