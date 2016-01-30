@@ -104,8 +104,7 @@ class LanguageConverter{
             $strLength=mb_strlen($str);
         }
         for($i=0; $i<count($strNew); $i++){
-            if($mapName=='geolat2utf8') $tmpChar=strtolower($strNew[$i]);	
-            else $tmpChar=$strNew[$i];	
+            $tmpChar=$strNew[$i];	
             if(isset($charMap[$mapName][$tmpChar])){
                 $convertedString.=$charMap[$mapName][$tmpChar]; 
             }else {
@@ -132,8 +131,7 @@ class LanguageConverter{
             $strLength=mb_strlen($str);
         }
         for($i=0; $i<count($strNew); $i++){
-			if($charMapKeyIndex=='georgia' && $charMapLayoutFrom=='ascii') $tmpChar=strtolower($strNew[$i]);
-            else $tmpChar=$strNew[$i];	
+			$tmpChar=$strNew[$i];	
             
             $index=array_search($tmpChar, $charMapFrom);	
             if($index!==false && isset($charMapTo[$index])){
