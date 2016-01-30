@@ -32,7 +32,8 @@ echo $languageConverter->convertStringByIndex('ÂÀÌÀÒãÏÁÀ ÓÀÌÚÀÒÏ
 გამარჯობა სამყარო!
 GAმAრჯოBA სAმყAრო!
 
-გამარჯობა სამყარო
-gAmArjoBA sAmyAro
+გამარჯობა სამყარო!
+
+ÂÀÌÀÒãÏÁÀ ÓÀÌÚÀÒÏ
 
 ```
