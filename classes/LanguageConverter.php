@@ -1,5 +1,6 @@
 <?php
 # Created By OpenSoft <info@opensoft.org.ge>
+# Writen By Kakhaber Kashmadze <info@soft.ge>
 # Licensed under MIT License
 # Projects Web Site: http://opensoft.org.ge
 # Software Projects Web Site: http://opensoft.ge
