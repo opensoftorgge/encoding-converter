@@ -1,9 +1,11 @@
 # converter-i18n
 
 Converter for internationalization support.
+
 Possibility the conversion for many language  support.
 
 კოდირების გადამყვანი რომელიც მრავალენოვანი კოდირების შექმნის შესაძლებლობას გაძლევთ 
+
 იმისათვის რომ დაამატოთ თქვენთვის სასურველი კოდირება, საკმარისია განსაზღვროთ მასივი:
 
 კოდში სხვა კოდირების დამატების მაგალითი:
