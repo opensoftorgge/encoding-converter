@@ -5,7 +5,7 @@
 # Projects Web Site: http://opensoft.org.ge
 # Software Projects Web Site: http://opensoft.ge
 # Git Projects: https://github.com/opensoftge
-# version 1.3
+# version 1.4
 
 class LanguageConverter
 {
