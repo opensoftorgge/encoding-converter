@@ -1,8 +1,6 @@
 # Encoding Converter
 
-Converter for internationalization support. 
-
-Possibility the conversion for many language  support.
+Encoding converter with internationalization support.
 
 კოდირების გადამყვანი რომელიც მრავალენოვანი კოდირების შექმნის შესაძლებლობას გაძლევთ. 
 
