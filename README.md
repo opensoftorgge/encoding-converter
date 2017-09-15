@@ -1,4 +1,4 @@
-# Encodinf Converter
+# Encoding Converter
 
 Converter for internationalization support. 
 
