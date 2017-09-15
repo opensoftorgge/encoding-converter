@@ -26,7 +26,7 @@ private $charMapByIndex = array(
 ?>
 ```
 
-### Sample code make custom coding Array:
+### Sample code: Add custom coding Array:
 
 ```sh
 <?php
